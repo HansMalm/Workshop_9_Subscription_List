@@ -18,9 +18,10 @@ public class Main {
         //Workshop Part 1 add business rules
         SubscriberFilter isActive = subscriber -> subscriber.isActive();
         SubscriberFilter isExpiring = subscriber -> subscriber.getMonthsRemaining() <= 1;
-        SubscriberFilter isActiveExpiring = subscriber ->;
+        SubscriberFilter isActiveExpiring = subscriber -> isActive.matches(subscriber)
+                && isExpiring.matches(subscriber);
         SubscriberFilter byPlan = subscriber -> subscriber.getPlan();
-        SubscriberFilter isPaying = subscriber ->;
+        SubscriberFilter isPaying = subscriber -> ;
 
         SubscriberAction extendSub = subscriber -> subscriber
                 .setMonthsRemaining(subscriber.getMonthsRemaining() + 1);
