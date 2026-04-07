@@ -15,13 +15,10 @@ public class SubscriberDAO {
     }
 
     public Subscriber findByID (int id) {
-        Subscriber returnSubscriber;
+        Subscriber returnSubscriber = new Subscriber(id, "empty", Plan.FREE, false, 0);
         for (Subscriber subscriber : subscriberList) {
             if (id == subscriber.getId()) {
                 returnSubscriber = subscriber;
-            }
-            else {
-                //What should we return???
             }
         }
         return returnSubscriber;

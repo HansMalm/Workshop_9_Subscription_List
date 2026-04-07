@@ -19,36 +19,32 @@ public class Subscriber {
         return id;
     }
 
-    public void setId(int id) {
-        this.id = id;
-    }
-
     public String getEmail() {
         return email;
-    }
-
-    public void setEmail(String email) {
-        this.email = email;
     }
 
     public Plan getPlan() {
         return plan;
     }
 
-    public void setPlan(Plan plan) {
-        this.plan = plan;
-    }
-
     public boolean isActive() {
         return active;
     }
 
-    public void setActive(boolean active) {
-        this.active = active;
-    }
-
     public int getMonthsRemaining() {
         return monthsRemaining;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public void setPlan(Plan plan) {
+        this.plan = plan;
+    }
+
+    public void setActive(boolean active) {
+        this.active = active;
     }
 
     public void setMonthsRemaining(int monthsRemaining) {
