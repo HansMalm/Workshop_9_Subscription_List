@@ -50,4 +50,9 @@ public class Subscriber {
     public void setMonthsRemaining(int monthsRemaining) {
         this.monthsRemaining = monthsRemaining;
     }
+
+    @Override
+    public String toString() {
+        return "Subscriber ID: " + id + ", Email: " + email + ", Plan: " + plan + " Active: " + active + ", Remaining: " + monthsRemaining + ".";
+    }
 }

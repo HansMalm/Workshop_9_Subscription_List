@@ -5,6 +5,7 @@ import java.util.ArrayList;
 public class SubscriberProcessor {
     public ArrayList<Subscriber> findSubscribers (ArrayList<Subscriber> list, SubscriberFilter filter) {
         ArrayList<Subscriber> resultList = list;
+
         return resultList;
     }
 
